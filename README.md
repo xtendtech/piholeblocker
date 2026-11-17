@@ -42,4 +42,4 @@ To install in ubuntu use ./install.sh or sh install.sh
 The Unlicense / CC0 (Creative Commons Zero). Dedicated to releasing work directly into the public domain. These waive all copyright and allow anyone to use the work without attribution or restrictions.
 
 
-dpkg-deb --build --root-owner-group package piholeblocker.deb
+dpkg-deb --build --root-owner-group package piholeblocker.deb to make deb package in ubuntu

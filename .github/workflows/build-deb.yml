@@ -16,13 +16,15 @@ jobs:
         run: |
           chmod 0755 package/DEBIAN/postinst
           chmod 0755 package/DEBIAN/prerm
-          chmod 0755 package/usr/local/bin/myscript.py
-          chmod 0644 package/lib/systemd/system/myscript.service
+          chmod 0755 package/DEBIAN/control
+          
+          chmod 0755 package/usr/local/bin/piholeblocker.py
+          chmod 0644 package/lib/systemd/system/piholeblocker.service
 
       - name: Build .deb package
-        run: dpkg-deb --build --root-owner-group package myscript-service.deb
+        run: dpkg-deb --build --root-owner-group package piholeblocker.deb
 
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2
         with:
-          files: myscript-service.deb
+          files: piholeblocker.deb
