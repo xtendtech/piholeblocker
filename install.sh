@@ -19,7 +19,7 @@ sudo systemctl enable --now piholeblocker.service
 IP_ADDRESS=$(curl -s ifconfig.me/ip)
 
 # Construct the target URL
-TARGET_URL="http://${IP_ADDRESS}:8080/secret-open-sesame"
+TARGET_URL="http://${IP_ADDRESS}:8081/secret-open-sesame"
 
 # Output the result
 echo "$TARGET_URL"
