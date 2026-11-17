@@ -1,4 +1,4 @@
-Package: piholeblocker service
+Package: piholeblockerservice
 Version: 1.0.0
 Section: utils
 Priority: optional
