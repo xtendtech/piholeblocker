@@ -2,14 +2,13 @@
 import http.server
 import subprocess
 import os
+import sys
+import subprocess
 
 PORT = 8081
 SECRET_PATH = "/secret-open-sesame"  # Change this to your secret token
 INTERFACE = "ens3"
-import sys
-import subprocess
-
-# sys.argv[1] == "--status"
+ 
 if "--status" in sys.argv:
  try:
         print("inside status")
@@ -21,8 +20,8 @@ if "--status" in sys.argv:
     
  except Exception:
         public_ip = "Unavailable"
-print(f"http://{public_ip}:8080/secret-open-sesame")
-print(f"Currently allowed DNS IP:  {', '.join(ips) if ips else 'None'}")
+print(f"http://{public_ip}:{PORT}/secret-open-sesame")
+# print(f"Currently allowed DNS IP:  {', '.join(ips) if ips else 'None'}")
 sys.exit(0)
 
 

@@ -4,7 +4,7 @@ set -e
 echo "Installing Pi-hole Blocker..."
 
 # 1. Copy the script to /usr/local/bin and make it executable
-sudo cp piholeblocker.py /usr/local/bin/piholeblocker.py
+sudo cp src/blockpihole/piholeblocker.py /usr/local/bin/piholeblocker.py
 sudo chmod +x /usr/local/bin/piholeblocker.py
 
 # 2. Copy the systemd service file to /etc/systemd/system/
