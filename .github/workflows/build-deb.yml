@@ -18,13 +18,15 @@ jobs:
           mkdir -p package/lib/systemd/system
 
           cp src/blockpihole/piholeblocker.py package/usr/local/bin/piholeblocker.py
-       
+           # Ensure all directories inside package/ are traversable (0755)
+          find package -type d -exec chmod 0755 {} +
           chmod 0755 package/DEBIAN/postinst
           chmod 0755 package/DEBIAN/prerm
           chmod 0755 package/DEBIAN/control
           
           chmod 0755 package/usr/local/bin/piholeblocker.py
           chmod 0644 package/lib/systemd/system/
+          chmod 0644 package/lib/systemd/system/piholeblocker.service
           
 
 
