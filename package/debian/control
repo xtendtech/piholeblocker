@@ -1,0 +1,8 @@
+Package: myscript-service
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, systemd
+Maintainer: Your Name <you@example.com>
+Description: Custom background service for my script

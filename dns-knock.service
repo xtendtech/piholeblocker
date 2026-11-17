@@ -1,0 +1,20 @@
+[Unit]
+Description=Pi-hole DNS Port Blocker Web Listener
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/dns_knock_listener.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+
+
+
