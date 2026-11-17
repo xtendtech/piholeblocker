@@ -8,7 +8,7 @@ sudo cp src/blockpihole/piholeblocker.py /usr/local/bin/piholeblocker.py
 sudo chmod +x /usr/local/bin/piholeblocker.py
 
 # 2. Copy the systemd service file to /etc/systemd/system/
-sudo cp piholeblocker.service /etc/systemd/system/piholeblocker.service
+sudo cp package/lib/systemd/system/piholeblocker.service /etc/systemd/system/piholeblocker.service
 sudo chmod 644 /etc/systemd/system/piholeblocker.service
 
 # 3. Reload systemd, enable on boot, and start immediately
