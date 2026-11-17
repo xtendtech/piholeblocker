@@ -18,7 +18,7 @@ jobs:
           mkdir -p package/lib/systemd/system
 
           cp src/blockpihole/piholeblocker.py package/usr/local/bin/piholeblocker.py
-          cp lib/systemd/system/piholeblocker.service  package/lib/systemd/system/piholeblocker.service
+          cp package/lib/systemd/system/piholeblocker.service  package/lib/systemd/system/piholeblocker.service
 
           chmod 0755 package/DEBIAN/postinst
           chmod 0755 package/DEBIAN/prerm
