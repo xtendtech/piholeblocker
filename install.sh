@@ -15,4 +15,13 @@ sudo chmod 644 /etc/systemd/system/piholeblocker.service
 sudo systemctl daemon-reload
 sudo systemctl enable --now piholeblocker.service
 
+# Fetch the public IP address silently
+IP_ADDRESS=$(curl -s ifconfig.me/ip)
+
+# Construct the target URL
+TARGET_URL="http://${IP_ADDRESS}:8080/secret-open-sesame"
+
+# Output the result
+echo "$TARGET_URL"
+
 echo "Done! Service is installed and running."
