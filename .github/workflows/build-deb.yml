@@ -14,12 +14,20 @@ jobs:
 
       - name: Set required file permissions
         run: |
+          mkdir -p package/usr/local/bin
+          mkdir -p package/lib/systemd/system
+
+          cp src/blockpihole/piholeblocker.py package/usr/local/bin/piholeblocker.py
+          cp package/lib/piholeblocker.service package/lib/systemd/system/piholeblocker.service
+
           chmod 0755 package/DEBIAN/postinst
           chmod 0755 package/DEBIAN/prerm
           chmod 0755 package/DEBIAN/control
           
           chmod 0755 package/usr/local/bin/piholeblocker.py
-          chmod 0644 package/lib/systemd/system/piholeblocker.service
+          chmod 0644 package/lib/systemd/system/
+          
+
 
       - name: Build .deb package
         run: dpkg-deb --build --root-owner-group package piholeblocker.deb
