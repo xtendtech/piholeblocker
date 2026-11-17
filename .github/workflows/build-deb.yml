@@ -19,17 +19,13 @@ jobs:
 
           cp src/blockpihole/piholeblocker.py package/usr/local/bin/piholeblocker.py
            # Fix ownership and directory permissions recursively using sudo
-          sudo chown -R $USER:$USER package
-          sudo find package -type d -exec chmod 0755 {} +
-          
+             # Set file permissions
+          chmod 0644 package/DEBIAN/control
           chmod 0755 package/DEBIAN/postinst
           chmod 0755 package/DEBIAN/prerm
-          chmod 0755 package/DEBIAN/control
-          
           chmod 0755 package/usr/local/bin/piholeblocker.py
-          chmod 0644 package/lib/systemd/system/
           chmod 0644 package/lib/systemd/system/piholeblocker.service
-          
+
 
 
       - name: Build .deb package
