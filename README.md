@@ -19,18 +19,26 @@ The script modifies iptables in mangle section which is the first section to get
  sudo iptables -t mangle -L PREROUTING -v -n
 
  Logs for webservice 
- sudo journalctl -u dns-knock.service -n 50 -f
+ sudo journalctl -u piholeblocker.service -n 50 -f
 
 
 Use to create
-sudo systemctl edit --full dns-knock.service
+sudo systemctl edit --full piholeblocker.service
 to start 
 To  start service
 sudo systemctl daemon-reload
-sudo systemctl start dns-knock.service
+sudo systemctl start piholeblocker.service
 
 To check status
-sudo systemctl status dns-knock.service
+sudo systemctl status piholeblocker.service
 
 To stop service
-sudo systemctl stop dns-knock.service
+sudo systemctl stop piholeblocker.service
+
+Installation using shell script
+To install in ubuntu use ./install.sh or sh install.sh 
+
+
+The Unlicense / CC0 (Creative Commons Zero). Dedicated to releasing work directly into the public domain. These waive all copyright and allow anyone to use the work without attribution or restrictions.
+
+

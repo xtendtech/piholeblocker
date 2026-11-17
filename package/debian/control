@@ -1,8 +1,8 @@
-Package: myscript-service
+Package: piholeblocker service
 Version: 1.0.0
 Section: utils
 Priority: optional
 Architecture: all
 Depends: python3, systemd
-Maintainer: Your Name <you@example.com>
-Description: Custom background service for my script
+Maintainer: Xtendtech  
+Description: Block all ports for pihole to prevent misuse

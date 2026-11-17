@@ -2,5 +2,5 @@
 set -e
 
 systemctl daemon-reload
-systemctl enable myscript.service
-systemctl start myscript.service
+systemctl enable piholeblocker.service
+systemctl start piholeblocker.service

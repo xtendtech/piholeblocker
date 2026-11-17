@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-systemctl stop myscript.service || true
-systemctl disable myscript.service || true
+systemctl stop piholeblocker.service || true
+systemctl disable piholeblocker.service || true
