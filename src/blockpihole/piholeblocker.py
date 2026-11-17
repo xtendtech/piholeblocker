@@ -10,7 +10,7 @@ SECRET_PATH = "/secret-open-sesame"  # Change this to your secret token
 INTERFACE = "ens3"
  
 if "--status" in sys.argv:
- try:
+    try:
         print("inside status")
         public_ip = subprocess.check_output(
             ["curl", "-s", "--max-time", "5", "ifconfig.me"],
@@ -18,11 +18,11 @@ if "--status" in sys.argv:
         ).strip()
     
     
- except Exception:
+    except Exception:
         public_ip = "Unavailable"
-print(f"http://{public_ip}:{PORT}/secret-open-sesame")
+    print(f"http://{public_ip}:{PORT}/secret-open-sesame")
 # print(f"Currently allowed DNS IP:  {', '.join(ips) if ips else 'None'}")
-sys.exit(0)
+    sys.exit(0)
 
 
 
