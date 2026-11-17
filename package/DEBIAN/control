@@ -5,4 +5,6 @@ Priority: optional
 Architecture: all
 Depends: python3, systemd
 Maintainer: Xtendtech  
-Description: Block all ports for pihole to prevent misuse
+Description: Block all ports for pihole on docker to prevent misuse from the internet.
+            UFW doesnt work on docker
+
